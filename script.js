@@ -31,7 +31,10 @@ function initMap() {
     var markerCluster = new MarkerClusterer(
       map,
       markers,
-      {imagePath: 'img/m'}
+      {
+        maxZoom: 7,
+        imagePath: 'img/m'
+      }
     )
   }
 }
