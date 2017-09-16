@@ -32,7 +32,7 @@ function initMap() {
       map,
       markers,
       {
-        maxZoom: 7,
+        maxZoom: 17,
         imagePath: 'img/m'
       }
     )
