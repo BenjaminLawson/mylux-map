@@ -11,7 +11,8 @@ with open('mylux_all_users.csv', 'rb') as csvfile:
         coords = row[2].split(',')
         lat = float(coords[0])
         lng = float(coords[1])
+        label = row[3]
         if lat != 0.0 and lng != 0.0 and row[1].lower() != 'none':
             lux = int(row[1])
-            luxlist.append({'lat': lat, 'lng': lng, 'lux': lux, 'time': row[4]})
-print json.dumps(luxlist)
+            luxlist.append({'lat': lat, 'lng': lng, 'lux': lux, 'time': row[4], 'lbl': label})
+print json.dumps(luxlist, ensure_ascii=False) # some foreign characters aren't ascii

@@ -19,7 +19,7 @@ function initMap() {
         position: location
       })
       var iw =  new google.maps.InfoWindow({
-        content: location.lux + ' lux <br>' + location.time
+        content: `<b>${ location.lbl }</b><br>${ location.lux } lux <br> ${ location.time }`
       })
       marker.addListener('click', function() {
         iw.open(map, marker)
